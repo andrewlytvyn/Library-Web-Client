@@ -1,4 +1,4 @@
 
-## About Library
+## About
 
-Laravel based web client for Library v2
+Браузерна версія відомої программи УФД/Бібліотека
