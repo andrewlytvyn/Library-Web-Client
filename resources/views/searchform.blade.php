@@ -4,7 +4,7 @@
 <div class='container main'>
 
     <FORM id='SearchForm' action='/booklist' class='form-horizontal' role='form' method='post' name='form_main' autocomplete='off'>
-        @csrf
+
         <input name='mode'       type='text' value='' hidden>
         <input name='ext'        type='text' value='no' hidden>
         <input name='lang'       type='text' value='ua' hidden>
@@ -157,6 +157,7 @@
             <OPTION value="50">50
         </SELECT>
         <INPUT type="hidden" name="page" value="1">
+        @csrf
     </FORM>
 
 

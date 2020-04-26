@@ -1,5 +1,7 @@
 <?php
 
+
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,12 +15,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::redirect('/', 'search');
-Route::get('search', function () {
-    return view('searchform');
-});
+Route::get('search', 'SearchController@index')->name('search');
+Route::post('search', 'DocumentController@index');
+//Route::get('autocomplete', 'SearchController@autocomplete')->name('autocomplete');
 
-Auth::routes();
+Auth::routes(['register' => false]);
 
-Route::get('home', 'HomeController@index')->name('home');
-Route::get('book/{id}', 'DocumentController@show');
+Route::get('booklist', 'DocumentController@index');
+
+Route::get('book/{id}', 'DocumentController@show')->name('book.show');
+
+
+Route::get('users', 'UserController@index');
+
 

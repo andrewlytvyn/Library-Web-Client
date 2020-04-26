@@ -41,11 +41,11 @@
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <a class="nav-link" href="{{ route('login') }}">Увійти</a>
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link" href="{{ route('register') }}">Рєєстрація</a>
                                 </li>
                             @endif
                         @else
@@ -76,5 +76,11 @@
             @yield('content')
         </main>
     </div>
+    <footer class='bd-footer text-muted'>
+        @php
+
+        echo "<p>".round(microtime(true) - $_SERVER["REQUEST_TIME_FLOAT"],2)." секунд</p>";
+        @endphp
+    </footer>
 </body>
 </html>
