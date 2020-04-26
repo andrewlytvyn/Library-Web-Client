@@ -1,4 +1,4 @@
 
 ## About Library
 
-Laravel based Library cms
+Laravel based web client for Library v2
