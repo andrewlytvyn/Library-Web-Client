@@ -10,33 +10,36 @@
                     <div class="card-body">
                         <b>Вид документа:</b>&nbsp;{{$document->doc_type}}<br>
 
-                        <b>Обсяг:</b>&nbsp;С.4-7.<br>
 
 
-                        PrintField( Translate("PublYear"), $PublYear, $FieldLine );<br>
-                        PrintField( Translate("PublPlace"), $PublPlace, $FieldLine );<br>
+
+                        <b>Рік публікації:</b> {{$document->publ_year}}<br>
+                        <b>Місце публікації:</b> {{$document->publ_place}}<br>
+
                         <hr>
-                        PrintField( Translate("Publisher"), $Publisher, $FieldLine );<br>
+                        <b>Publisher:</b> {{$document->publisher}}<br><br>
                         <hr>
 
                         <b>Автор:</b>&nbsp;{{$document->author}}&nbsp;<br>
-                        PrintField( Translate("AuthorsMark"), $AuthorMark, $FieldLine );<br>
-                        <b>Вид автора:</b>&nbsp;{{$document->author_type}}<br><br>
+                        <b>Авторський знак:</b>&nbsp;{{$document->author_mark}}&nbsp;<br>
+                        <b>Вид автора:</b>&nbsp;{{$document->author_type}}<br>
 
                         <b>Мова:</b>&nbsp;{{$document->lang_kod}}&nbsp;{{$document->lang}}&nbsp;<br>
-                        PrintField( SelectWord($Language, "Обсяг", "Объём", "Volume"), $Size, $FieldLine );<br>
+                        <b>Обсяг:</b>&nbsp;{{$document->sizem}}<br>
 
 
-                        PrintField( SelectWord($Language, "Шифр", "Шифр", "Cipher"), $Cipher, $FieldLine );<br>
-                        PrintLine($FieldLine);<br>
-                        PrintField( SelectWord($Language, "УДК", "УДК", "UDC"), $UDC, $FieldLine );<br>
-                        PrintLine($FieldLine);<br>
-                        PrintField( SelectWord($Language, "ББК", "ББК", "BBC"), $BBC, $FieldLine );<br>
-                        PrintLine($FieldLine);<br>
-                        PrintField( "ISBN", $ISBN, $FieldLine );<br>
-                        PrintLine($FieldLine);<br>
-                        PrintField( "ISSN", $ISSN, $FieldLine );<br>
-                        PrintLine($FieldLine);<br>
+
+                        <b>Шифр:</b>&nbsp;{{$document->cipher}}<br>
+                        <hr>
+                        <b>УДК:</b>&nbsp;{{$document->udk}}<br>
+                        <hr>
+                        <b>ББК:</b>&nbsp;{{$document->bbk}}<br>
+                        <hr>
+                        <b>ISBN:</b>&nbsp;{{$document->isbn}}<br>
+
+                        <hr>
+                        <b>ISSN:</b>&nbsp;{{$document->issn}}<br>
+                        <hr>
 
                     </div>
                 </div>
