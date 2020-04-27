@@ -3,6 +3,6 @@ php:
   - 7.4
 before_install:
   - travis_retry composer self-update
-  - travis_retry composer install --prefer-dist --no-interaction --prefer-stable --no-suggest; fi
+  - travis_retry composer install --prefer-dist --no-interaction --prefer-stable --no-suggest
 script:
   - vendor/bin/phpunit
