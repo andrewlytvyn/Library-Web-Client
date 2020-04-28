@@ -2,7 +2,8 @@ language: php
 php:
   - 7.4
 before_install:
-  - travis_retry composer self-update
-  - travis_retry composer install --no-interaction
+  - cp .env.travis .env
+
 script:
   - vendor/bin/phpunit
+
