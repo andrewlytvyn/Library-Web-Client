@@ -2,6 +2,7 @@ language: php
 php:
   - 7.4
 before_install:
+  - composer install
   - cp .env.travis .env
 
 script:
