@@ -51,4 +51,9 @@ class User extends Authenticatable
         $array['person_status'] = 'A';
         return static::query()->create($array);
     }
+
+    public function roles()
+    {
+        return $this->belongsToMany('App\Role', 'usergroup', 'alias', 'groupcode');
+    }
 }
