@@ -9,7 +9,7 @@
 
                     <div class="card-body">
 
-                            <b>Вид документа:</b>&nbsp;{{$document->doc_type}}<br>
+                            @isset($document->doc_type)<b>Вид документа:</b>&nbsp;{{$document->doc_type}}<br>@endisset
 
 
 
@@ -18,31 +18,34 @@
                             <b>Місце публікації:</b> {{$document->publ_place}}<br>
 
                             <hr>
-                            <b>Publisher:</b> {{$document->publisher}}<br><br>
+                            @isset($document->publisher)<b>Publisher:</b> {{$document->publisher}}<br><br>@endisset
                             <hr>
 
-                            <b>Автор:</b>&nbsp;{{$document->author}}&nbsp;<br>
-                            <b>Авторський знак:</b>&nbsp;{{$document->author_mark}}&nbsp;<br>
-                            <b>Вид автора:</b>&nbsp;{{$document->author_type}}<br>
+                            @isset($document->author)<b>Автор:</b>&nbsp;{{$document->author}}&nbsp;<br>@endisset
+                            @isset($document->author_mark)<b>Авторський знак:</b>&nbsp;{{$document->author_mark}}&nbsp;<br>@endisset
+                            @isset($document->author_type)<b>Вид автора:</b>&nbsp;{{$document->author_type}}<br>@endisset
 
-                            <b>Мова:</b>&nbsp;{{$document->lang_kod}}&nbsp;{{$document->lang}}&nbsp;<br>
-                            <b>Обсяг:</b>&nbsp;{{$document->sizem}}<br>
+                            @isset($document->lang_kod)<b>Мова:</b>&nbsp;{{$document->lang_kod}}&nbsp;{{$document->lang}}&nbsp;<br>@endisset
+                            @isset($document->sizem)<b>Обсяг:</b>&nbsp;{{$document->sizem}}<br>@endisset
 
 
 
-                            <b>Шифр:</b>&nbsp;{{$document->cipher}}<br>
+                            @isset($document->cipher)<b>Шифр:</b>&nbsp;{{$document->cipher}}<br>@endisset
                             <hr>
-                            <b>УДК:</b>&nbsp;{{$document->udk}}<br>
+                            @isset($document->udk)<b>УДК:</b>&nbsp;{{$document->udk}}<br>@endisset
                             <hr>
-                            <b>ББК:</b>&nbsp;{{$document->bbk}}<br>
+                            @isset($document->bbk)<b>ББК:</b>&nbsp;{{$document->bbk}}<br>@endisset
                             <hr>
-                            <b>ISBN:</b>&nbsp;{{$document->isbn}}<br>
+                            @isset($document->isbn)<b>ISBN:</b>&nbsp;{{$document->isbn}}<br>@endisset
 
                             <hr>
-                            <b>ISSN:</b>&nbsp;{{$document->issn}}<br>
+                            @isset($document->issn)<b>ISSN:</b>&nbsp;{{$document->issn}}<br>@endisset
                             <hr>
-
+                    @isset($document->annotation)
                         <p>
+                            @php
+                            //dd($document->annotation);
+                            @endphp
                             <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
                                 Аннотацiя:
                             </a>
@@ -52,6 +55,7 @@
                                 {{$document->annotation}}
                             </div>
                         </div>
+                    @endisset
 
                     </div>
                 </div>

@@ -17,6 +17,8 @@ public function getAnnotationAttribute()
     foreach ($fragments as $fragment ){
         $annot.=$fragment->fragment;
     }
+    if($annot == "")
+        $annot = NULL;
     return $annot;
 }
 
