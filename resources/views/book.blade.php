@@ -37,9 +37,15 @@
                             @if($document->device_kod == 28670 and trim($document->long_filename) <> "" and !is_null($document->long_filename))
                                 <hr><p><a class='btn btn-outline-info btn-sm' href={{$document->long_filename}}>Електронная копія</a></p>
                             @endif
-                            @foreach($document->topics as $topic)
-                                {{$topic->name}}<br/>
-                            @endforeach
+                            @isset($document->topics)
+                                <b>Теми документу</b>
+                                <ul>
+                                    @foreach($document->topics as $topic)
+                                        <li>{{$topic->name}}</li>
+                                    @endforeach
+                                </ul>
+                            @endisset
+
 
                     </div>
                 </div>

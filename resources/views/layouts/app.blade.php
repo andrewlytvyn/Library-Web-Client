@@ -76,7 +76,7 @@
             @yield('content')
         </main>
     </div>
-    <footer class='bd-footer text-muted'>
+    <footer class='bd-footer text-muted container'>
         @php
 
         echo "<p>".round(microtime(true) - $_SERVER["REQUEST_TIME_FLOAT"],2)." секунд</p>";
