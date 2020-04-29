@@ -8,7 +8,7 @@
                     <div class="card-header">{{$document->name}}</div>
 
                     <div class="card-body">
-                        <p>
+
                             <b>Вид документа:</b>&nbsp;{{$document->doc_type}}<br>
 
 
@@ -41,7 +41,7 @@
                             <hr>
                             <b>ISSN:</b>&nbsp;{{$document->issn}}<br>
                             <hr>
-                        </p>
+
                         <p>
                             <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
                                 Аннотацiя:
@@ -49,7 +49,7 @@
                         </p>
                         <div class="collapse" id="collapseExample">
                             <div class="card card-body">
-                                {{$document->Annotation}}
+                                {{$document->annotation}}
                             </div>
                         </div>
 

@@ -19,4 +19,16 @@ public function getAnnotationAttribute()
     }
     return $annot;
 }
+
+public function getDocTypeAttribute($value)
+    {
+        $value = DB::table('doctype')->where('code', $value)->value('name');
+        return $value;
+    }
+
+public function getAuthorTypeAttribute($value)
+    {
+        $value =  DB::table('auth_type_main')->where('kod', $value)->value('name');
+        return $value;
+    }
 }

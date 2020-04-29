@@ -65,14 +65,10 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-         DB::table('maxes')->increment('phys_person_id');
-        $data['id'] = DB::table('maxes')->max('phys_person_id');
 
         return User::create([
-            'id' => $data['id'],
             'name' => $data['name'],
             'email' => $data['email'],
-            'person_status' => 'A',
             'person_password' => Hash::make($data['password']),
         ]);
     }

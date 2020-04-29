@@ -16,9 +16,6 @@ class DocumentController extends Controller
 
     public function show($id)
     {
-        $document = Document::findOrFail($id);
-        $document->doc_type = DB::table('doctype')->where('code', $document->doc_type)->value('name');
-        $document->author_type = DB::table('auth_type_main')->where('kod', $document->author_type)->value('name');
-        return view('book', ['document' => $document]);
+        return view('book', ['document' => Document::findOrFail($id)]);
     }
 }
