@@ -2,9 +2,18 @@
 
 @section('content')
     <div class="container">
-        @foreach($user->roles as $role)
-            {{$role->name}}
-        @endforeach
+        <p>
+            @foreach($user->roles as $role)
+                {{$role->name}}:
+            <p>
+                @foreach($role->permissions as $permission)
+                    {{$permission->name}}
+                @endforeach
+            </p>
+
+            @endforeach
+        </p>
+
     </div>
 
 

@@ -55,10 +55,11 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('profile.show', Auth::user()->id) }}">Мій профіль</a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
+                                        {{ __('auth.logout') }}
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -77,10 +78,12 @@
         </main>
     </div>
     <footer class='bd-footer text-muted container'>
-        @php
-
-        echo "<p>".round(microtime(true) - $_SERVER["REQUEST_TIME_FLOAT"],2)." секунд</p>";
-        @endphp
+        <p>160740 - документів в базі даних.</p><p>17.03.2020 - Останнє поновлення</p>
+        <p>
+            @php
+                echo round(microtime(true) - $_SERVER["REQUEST_TIME_FLOAT"],2)." секунд";
+            @endphp
+        </p>
     </footer>
 </body>
 </html>

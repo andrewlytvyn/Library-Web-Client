@@ -11,6 +11,7 @@ class DocumentController extends Controller
     public function index(Request $request)
     {
         $documents = Document::where("name","LIKE","%{$request->input('docname_fld')}%")->paginate(20);
+
         return view('booklist', ['documents' => $documents]);
     }
 

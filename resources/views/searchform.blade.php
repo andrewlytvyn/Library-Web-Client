@@ -3,8 +3,8 @@
 @section('content')
 <div class='container main'>
 
-    <FORM id='SearchForm' action='/booklist' class='form-horizontal' role='form' method='post' name='form_main' autocomplete='off'>
-
+    <FORM id='SearchForm' action='/search' class='form-horizontal' role='form' method='post' name='form_main' autocomplete='off'>
+        @csrf
         <input name='mode'       type='text' value='' hidden>
         <input name='ext'        type='text' value='no' hidden>
         <input name='lang'       type='text' value='ua' hidden>
@@ -148,26 +148,10 @@
             </div>
         </div>
         <a href='/search' role='button' class='btn btn-sm btn-secondary' id='setExt'>Розширений перелік полів</a>
-        <br>Кількість документів на сторінці
-        <SELECT name="step">
-            <OPTION value="10">10
-            <OPTION value="20" SELECTED>20
-            <OPTION value="30">30
-            <OPTION value="40">40
-            <OPTION value="50">50
-        </SELECT>
+
         <INPUT type="hidden" name="page" value="1">
-        @csrf
+
     </FORM>
-
-
-    <!-- //******************** USH/Library BODY *************************** -->
-
-    <!--<a href="https://lib.dsau.dp.ua/" target="_blank">Відкрити у новому вікні</a>-->
-    <br/>
-
-    <footer class='bd-footer text-muted'>
-        <p>160740 - документів в базі даних.</p><p>17.03.2020 - Останнє поновлення</p><p>0.05 секунд</p></footer>
 </div>
 
 

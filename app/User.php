@@ -52,6 +52,9 @@ class User extends Authenticatable {
     }
 
     public function roles() {
-        return $this->belongsToMany( 'App\Role', 'usergroup', 'alias', 'groupcode' );
+        return $this->belongsToMany( Role::class, 'usergroup', 'alias', 'groupcode' );
+    }
+    public function permissions(){
+        return $this->hasManyThrough(Permission::class, Role::class,'code','code','id');
     }
 }

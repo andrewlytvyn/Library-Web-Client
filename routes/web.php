@@ -21,8 +21,6 @@ Route::post('search', 'DocumentController@index');
 
 Auth::routes(['register' => false]);
 
-Route::get('booklist', 'DocumentController@index');
-
 Route::get('book/{id}', 'DocumentController@show')->name('book.show');
 Route::get('profile/{id}', 'UserController@show')->name('profile.show');
 

@@ -34,6 +34,9 @@ class Document extends Model
             $value =  DB::table('auth_type_main')->where('kod', $value)->value('name');
             return $value;
         }
+    public function getParentDocAttribute(){
+        return Document::find($this->parent_id);
+    }
 
     public function topics()
         {
@@ -43,6 +46,15 @@ class Document extends Model
                     'doc_id',
                     'card_id');
         }
+
+    public function parent_for(){
+
+            return $this->hasMany(
+                self::class,
+                'parent_id',
+                'doc_id')->orderByDesc('publ_year');
+
+    }
 
 
 }

@@ -13,4 +13,12 @@ class Role extends Model
     {
         return $this->belongsToMany('App\User');
     }
+
+    public function permissions(){
+        return $this->belongsToMany(
+            Permission::class,
+            'groupauthority',
+            'groupcode',
+            'authcode');
+    }
 }
