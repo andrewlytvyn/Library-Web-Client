@@ -114,38 +114,8 @@
 
 
             </div>
+            <!-- <x-topic-list class="col-md-5 col-lg-6"/>-->
 
-            <div class='col-md-5 col-lg-6'>
-                <!-- ************************************
-                                Пошук теми
-                    ************************************ -->
-
-                <p>Пошук теми<br>
-                    <INPUT name='theme_context' size=30 maxlength=100 >
-                        <input type='submit' value='Шукати'  onClick="form_main.method ='post';form_main.action='/topic-list';form_main.mode.value='SearchThemeForm';">
-                </p>
-
-                <table border=0 >
-                    <tr><td colspan='2'><b>Класифікатори</b></td></tr>
-                    <tr><td width=15>&nbsp;</td><td>
-                            <a href='/search' onClick="form_main.method ='post';form_main.action='/search';form_main.theme_path.value='0,10632';form_main.mode.value='SearchDocForm';form_main.submit();return false">Key words</a>
-                        </td></tr>
-                    <tr><td width=15>&nbsp;</td><td><a href='/search' onClick="form_main.method ='post';form_main.action='/search';form_main.theme_path.value='0,13615';form_main.mode.value='SearchDocForm';form_main.submit();return false">ББК</a></td></tr>
-                    <tr><td width=15>&nbsp;</td><td><a href='/search' onClick="form_main.method ='post';form_main.action='/search';form_main.theme_path.value='0,104698';form_main.mode.value='SearchDocForm';form_main.submit();return false">ДДАЕУ - історія і сучасність</a></td></tr>
-                    <tr><td width=15>&nbsp;</td><td><a href='/search' onClick="form_main.method ='post';form_main.action='/search';form_main.theme_path.value='0,155825';form_main.mode.value='SearchDocForm';form_main.submit();return false">Дисертації</a></td></tr>
-                    <tr><td width=15>&nbsp;</td>
-                        <td><a href='/search' onClick="form_main.method ='post';form_main.action='/search';form_main.theme_path.value='0,147719';form_main.mode.value='SearchDocForm';form_main.submit();return false">Дніпропетровщина: історія і сьогодення (краєзнавство)</a></td></tr>
-                    <tr><td width=15>&nbsp;</td><td><a href='/search' onClick="form_main.method ='post';form_main.action='/search';form_main.theme_path.value='0,104699';form_main.mode.value='SearchDocForm';form_main.submit();return false">Екологія та охорона навколишнього середовища</a></td></tr>
-                    <tr><td width=15>&nbsp;</td><td><a href='/search' onClick="form_main.method ='post';form_main.action='/search';form_main.theme_path.value='0,5324';form_main.mode.value='SearchDocForm';form_main.submit();return false">Ключові слова</a></td></tr><tr><td width=15>&nbsp;</td>
-                        <td><a href='/search' onClick="form_main.method ='post';form_main.action='/search';form_main.theme_path.value='0,150898';form_main.mode.value='SearchDocForm';form_main.submit();return false">Наукова періодика - online</a></td></tr><tr><td width=15>&nbsp;</td>
-                        <td><a href='/search' onClick="form_main.method ='post';form_main.action='/search';form_main.theme_path.value='0,151125';form_main.mode.value='SearchDocForm';form_main.submit();return false">Наукові видання ДДАЕУ</a></td></tr><tr><td width=15>&nbsp;</td>
-                        <td><a href='/search' onClick="form_main.method ='post';form_main.action='/search';form_main.theme_path.value='0,4447';form_main.mode.value='SearchDocForm';form_main.submit();return false">Персоналії</a></td></tr><tr><td width=15>&nbsp;</td>
-                        <td><a href='/search' onClick="form_main.method ='post';form_main.action='/search';form_main.theme_path.value='0,102086';form_main.mode.value='SearchDocForm';form_main.submit();return false">Праці ДДАЕУ</a></td></tr><tr><td width=15>&nbsp;</td>
-                        <td><a href='/search' onClick="form_main.method ='post';form_main.action='/search';form_main.theme_path.value='0,104697';form_main.mode.value='SearchDocForm';form_main.submit();return false">Рідкісні видання</a></td></tr><tr><td width=15>&nbsp;</td>
-                        <td><a href='/search' onClick="form_main.method ='post';form_main.action='/search';form_main.theme_path.value='0,1';form_main.mode.value='SearchDocForm';form_main.submit();return false">УДК</a></td></tr></table>
-                <INPUT type='hidden' name='theme_cond' value='all_theme'>
-                    <INPUT type='hidden' name='theme_id' value='0'>
-            </div>
         </div>
         <a href='/search' role='button' class='btn btn-sm btn-secondary' id='setExt'>Розширений перелік полів</a>
 

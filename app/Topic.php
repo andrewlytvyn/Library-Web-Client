@@ -11,5 +11,12 @@ class Topic extends Model
     public $timestamps = false;
     protected $primaryKey = 'card_id';
 
-
+    public function child(){
+        return $this->belongsToMany(
+            Topic::class,
+            'ref_card',
+            'card_id',
+            'card_ref',
+            );
+    }
 }
